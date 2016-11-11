@@ -10,7 +10,8 @@
         {
           "containerPort": 80,
           "protocol": "tcp",
-          "name": "http"
+          "name": "http",
+          "servicePort": 0
         }
       ],
       "network": "BRIDGE"
@@ -30,6 +31,7 @@
   "labels": {
     "DCOS_SERVICE_PORT_INDEX": "0",
     "DCOS_SERVICE_SCHEME": "http",
+    "HAPROXY_GROUP": "external",
     "DCOS_SERVICE_NAME": "nginx-kkv"
   }
 }
