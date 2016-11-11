@@ -33,8 +33,8 @@ node {
 
     marathon(
         url: 'http://marathon.mesos:8080',
-        forceUpdate: true,
-        credentialsId: 'kkvqcon',
+        forceUpdate: false,
+        credentialsId: 'dcos-token',
         filename: 'marathon.json',
         appId: 'nginx-kkv',
         docker: "kkvqcon/kkvqcon:${gitCommit()}".toString()
