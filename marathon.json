@@ -5,7 +5,7 @@
   "instances": 1,
   "container": {
     "docker": {
-      "image": "kkvqcon/kkvqcon:latest",
+      "image": "kkvqcon/kkvqcon",
       "portMappings": [
         {
           "containerPort": 80,
