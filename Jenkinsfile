@@ -33,7 +33,7 @@ node {
 
     marathon(
         url: 'http://marathon.mesos:8080',
-        forceUpdate: false,
+        forceUpdate: true,
         credentialsId: 'kkvqcon',
         filename: 'marathon.json',
         appId: 'nginx-kkv',
