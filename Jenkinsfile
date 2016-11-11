@@ -27,4 +27,17 @@ node {
         sh "docker login -u ${env.DOCKERHUB_USERNAME} -p ${env.DOCKERHUB_PASSWORD}"
         sh "docker push kkvqcon/kkvqcon:${gitCommit()}"
     }
+
+     // Deploy
+    stage 'Deploy'
+
+    marathon(
+        url: 'http://marathon.mesos:8080',
+        forceUpdate: false,
+        credentialsId: 'kkvqcon',
+        filename: 'marathon.json',
+        appId: 'nginx-kkv',
+        docker: "kkvqcon/kkvqcon:${gitCommit()}".toString()
+    )
 }
+
