@@ -2,7 +2,7 @@
   "id": "/nginx-kkv",
   "cpus": 1,
   "mem": 128,
-  "instances": 1,
+  "instances": 3,
   "container": {
     "docker": {
       "image": "kkvqcon/kkvqcon",
